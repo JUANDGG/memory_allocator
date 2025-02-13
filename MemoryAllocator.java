@@ -8,7 +8,7 @@ import java.util.Scanner;
 *
 */
 
-public class GarbageCollectorTest {
+public class MemoryAllocator {
     
     public static String getOptionMessage() {
         return "Ingrese una opción: ";
