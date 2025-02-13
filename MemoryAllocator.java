@@ -2,6 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/*
+*
+* Esto es un ejemplo muy simple de como mas o menos funciona la memoria
+*
+*/
+
 public class GarbageCollectorTest {
     
     public static String getOptionMessage() {
@@ -40,9 +46,14 @@ public class GarbageCollectorTest {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        /*esto simularia 3 capas de la memoria aunque hay q recordar que existen varias
+        y que la capa string pool iria dentro de la capa de la memoria heap
+        ya que asi normalmente funciona la memoria 
+        */
+        int layers = 3;
+        
         // simulación de la memoria dividida en capas stack y Heap
-        List<List<?>> memory = new ArrayList<>();
+        List<List<?>> memory = new ArrayList<>(3);
         memory.add(new ArrayList<Number>()); // simula la memoria Stack
         memory.add(new ArrayList<Object>()); // simula la memoria Heap
         memory.add(new ArrayList<String>()); // simula el String Pool
